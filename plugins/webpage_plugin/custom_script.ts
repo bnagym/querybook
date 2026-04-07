@@ -1,6 +1,11 @@
 // Place your custom css/js logic here
 import React from 'react';
 
+// Row limit scale customization
+window.ROW_LIMIT_SCALE = [10, 100, 1000, 10000, 50000, 100000];
+window.DEFAULT_ROW_LIMIT = 100000;
+window.ALLOW_UNLIMITED_QUERY = true;
+
 export {};
 
 interface IColumnDetector {
@@ -35,6 +40,9 @@ declare global {
         // Users will see this message if they cannot
         // access any
         NO_ENVIRONMENT_MESSAGE?: string;
+        ROW_LIMIT_SCALE?: number[];
+        DEFAULT_ROW_LIMIT?: number;
+        ALLOW_UNLIMITED_QUERY?: boolean;
         CUSTOM_LANDING_PAGE?: {
             // Two modes of custom landing page
             // replace: replace the entire landing page with custom content
